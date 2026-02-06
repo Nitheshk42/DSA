@@ -94,7 +94,51 @@ class Arrays5{
             }
             System.out.println("Median is: " + median);
         }
-    public static void sort(int[] combined) {
+        public static void sort(int[] combined) {
             sort(combined);
+        }
+}
+//pattern name:- Adjacent Comparison/Two pointers
+//Contains Duplicates. 02/06/2026
+class Arrays6{
+    public static boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for(int i=0; i<nums.length-1; i++){
+            if(nums[i] == nums[i+1]){
+                return true;
+            }
+        } return false;
     }
+
+    public static void main(String[] args){
+        int[] nums={1, 2, 3, 1};
+        System.out.println(containsDuplicate(nums));
+        int[] nums1 = {1, 2, 3, 4};
+        System.out.println(containsDuplicate(nums1));
+        int[] nums2 = {1, 2, 3, 4, 1, 2, 3};
+        System.out.println(containsDuplicate(nums2));
     }
+}
+//pattern name:- Brute force
+/// Two Sums.    02/06/2026
+class Arrays7 {
+        public static int[] twoSum(int[] nums, int target) {
+            for(int i=0; i<nums.length; i++){
+                for(int j=i+1; j<nums.length; j++){
+                    if(nums[i]+nums[j] == target){
+                        return new int[]{i,j};
+                    }
+                }
+            }return new int[]{};
+        }
+        public static void main(String[] args){
+            int[] nums={2, 7, 11, 15};
+            int[] result = twoSum(nums, 9);
+            System.out.println(result[0] + " " + result[1]);
+            int[] nums1 = {2, 7};
+            int[] result1 = twoSum(nums1, 9);
+            System.out.println(result1[0] + " , " + result1[1]);
+        }
+    }
+
+

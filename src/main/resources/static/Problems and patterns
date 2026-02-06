@@ -1,0 +1,5 @@
+Problem                                 Pattern
+Find duplicate in sorted array.      Adjacent comparison
+Remove duplicates                     Two pointers (slow/fast)
+Two Sum                                Nested loop / HashMap
+XOR unique element                     Bit manipulation
