@@ -1,9 +1,13 @@
 package com.example.datastructures;
 import java.util.List;
 import java.util.concurrent.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/*public class TaskProcessor {
+//import static java.util.stream.Nodes.collect;
+
+public class Executorservice {
 
     public static void processTasks(List<Runnable> tasks) {
         ExecutorService executor = Executors.newFixedThreadPool(5);
@@ -20,8 +24,8 @@ import java.util.stream.Collectors;
                                             + " : " + e.getMessage()
                             );
                         }
-                    }));
-            Collectors(concurrent.toList());
+                    }))
+            .collect(Collectors.toList());
 
             // Ensure all tasks complete
             for (Future<?> future : futures) {
@@ -56,4 +60,4 @@ import java.util.stream.Collectors;
         processTasks(tasks);
         System.out.println("All tasks completed.");
     }
-}*/
+}
