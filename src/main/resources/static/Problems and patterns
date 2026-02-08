@@ -3,3 +3,24 @@ Find duplicate in sorted array.      Adjacent comparison
 Remove duplicates                     Two pointers (slow/fast)
 Two Sum                                Nested loop / HashMap
 XOR unique element                     Bit manipulation
+
+///Common LeetCode problems using HashSet
+Problem                                  Why HashSet
+Contains Duplicate                     Check if seen before
+Happy Number                               Detect cycle
+Intersection of Two Arrays              Unique common elements
+Longest Consecutive Sequence             Fast existence check
+Valid Sudoku                           No repetition allowed
+
+Use HashSet when the question asks:
+
+🔑 Pattern signals
+
+Look for words like:
+	•	contains duplicate
+	•	unique elements
+	•	seen before
+	•	distinct
+	•	remove duplicates
+	•	intersection
+	•	check existence fast

@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashSet;
+
 //Sum of Arrays
 class Arrays1 {
 
@@ -141,4 +143,25 @@ class Arrays7 {
         }
     }
 
+//majorityElement Brute force
+class Arrays9{
+    public static int majorityElement(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            int count = 0;
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    count++;
+                }
+            }
+            if (count > nums.length/ 2) {
+                return nums[i];
+            }
 
+        }return 0;
+    }
+        public static void main(String[] args) {
+        int[] nums = {2, 2, 3};
+        System.out.println(majorityElement(nums));
+    }
+
+    }
