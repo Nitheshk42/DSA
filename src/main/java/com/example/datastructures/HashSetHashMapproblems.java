@@ -40,6 +40,19 @@ class Solution {
     }
 }*/
 
+//majorityElement with HashSet
 class Solution2 {
-
+    public static int majorityElement(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            set.add(nums[i]);
+            if (set.contains(nums[i])) {
+                return nums[i];
+            }
+        }return 0;
+    }
+    public static void main(String[] args){
+        int[] nums = {3, 4, 3, 4, 4, 3, 3, 3};
+        System.out.println(majorityElement(nums));
+    }
 }
