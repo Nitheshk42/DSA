@@ -43,8 +43,8 @@ class Solution {
 //majorityElement with HashSet
 class Solution2 {
     public static int majorityElement(int[] nums) {
-        HashSet<Integer> set = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
+    //    HashSet<Integer> set = new HashSet<>();
+        for (int i = 0, ; i < nums.length; i++) {
             int count = 0;
             for (int j=1; j<nums.length; j++){
                 count++;
