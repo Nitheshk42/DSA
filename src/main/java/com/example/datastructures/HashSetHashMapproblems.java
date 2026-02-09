@@ -45,14 +45,17 @@ class Solution2 {
     public static int majorityElement(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
-            set.add(nums[i]);
-            if (set.contains(nums[i])) {
+            int count = 0;
+            for (int j=1; j<nums.length; j++){
+                count++;
+            }
+            if (count > nums.length/2) {
                 return nums[i];
             }
         }return 0;
     }
     public static void main(String[] args){
-        int[] nums = {3, 4, 3, 4, 4, 3, 3, 3};
+        int[] nums = {1};
         System.out.println(majorityElement(nums));
     }
 }
