@@ -25,37 +25,29 @@ class Solution {
 
 //Two Sums using HashMap
 /*class Solution2 {
-    public static int twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> sum = new HashMap<>();
+    public static int twoSum(int[] nums, int target){
+       HashMap<Integer, Integer> sum = new HashMap<>();
         for(int i=0; i<nums.length; i++){
-            int result = target - nums[i];
-            if(sum.containsKey(result)){
-                return new int[] {sum.get(result) ,i};
-            }sum.put(nums[i], i);
-        }return new int[] {};
-    }
-    public static void main(String[] args){
-        int[] nums = {2, 7, 9, 1, 11, 12};
-        System.out.println(twoSum(nums, 9));
-    }
+            if(nums.
 }*/
 
 //majorityElement with HashSet
 class Solution2 {
     public static int majorityElement(int[] nums) {
-    //    HashSet<Integer> set = new HashSet<>();
-        for (int i = 0, ; i < nums.length; i++) {
-            int count = 0;
-            for (int j=1; j<nums.length; j++){
-                count++;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < nums.length; i++) {
+            if(map.containsKey(nums[i])){
+                map.put(nums[i], map.get(nums[i]) + 1);
+            }else{
+                map.put(nums[i], 1);
             }
-            if (count > nums.length/2) {
+            if (map.get(nums[i]) > nums.length / 2) {
                 return nums[i];
             }
         }return 0;
     }
     public static void main(String[] args){
-        int[] nums = {1};
+        int[] nums = {1,2,3,2,3,2};
         System.out.println(majorityElement(nums));
     }
-}
+    }

@@ -45,7 +45,7 @@ class LogicBuildingProblems2 {
 }
 
 //sum of Natural numbers
-class LogicBuildingProblems3 {
+/*class LogicBuildingProblems3 {
     public static int naturalNumbers(int n){
         int result = 0;
         for(int i=0; i<n; i++){
@@ -57,6 +57,6 @@ class LogicBuildingProblems3 {
         int n=3;
         naturalNumbers(n);
     }
-}
+}*/
 
 
