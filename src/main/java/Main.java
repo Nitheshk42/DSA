@@ -1,5 +1,5 @@
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.HashMap;
 
 //Sum of Arrays
 class Arrays1 {
@@ -164,4 +164,24 @@ class Arrays9{
         System.out.println(majorityElement(nums));
     }
 
+    }
+
+    //
+    class Solution{
+        public static boolean containsDuplicate(int[] nums){
+            HashMap<Integer, Integer> check = new HashMap<>();
+            for(int i=0; i<nums.length; i++){
+                if(check.containsKey(nums[i])){
+                    check.put(nums[i], check.get(nums[i])+1);
+                } else{
+                    check.put(nums[i], 1);
+                }
+            }return false;
+        }
+        public static void main(String[] args){
+            int[] nums = {1, 2, 3, 1};
+            System.out.println(containsDuplicate(nums));
+         //   int[] nums1 = {1, 2, 3, 4};
+         //   System.out.println(containsDuplicate(nums1));
+        }
     }
