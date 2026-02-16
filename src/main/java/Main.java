@@ -104,14 +104,16 @@ class Arrays5{
 //Contains Duplicates. 02/06/2026
 class Arrays6{
     public static boolean containsDuplicate(int[] nums) {
-        Arrays.sort(nums);
-        for(int i=0; i<nums.length-1; i++){
-            if(nums[i] == nums[i+1]){
-                return true;
+        //  Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    return true;
+                }
             }
-        } return false;
-    }
 
+        }return false;
+    }
     public static void main(String[] args){
         int[] nums={1, 2, 3, 1};
         System.out.println(containsDuplicate(nums));
@@ -167,21 +169,3 @@ class Arrays9{
     }
 
     //
-    class Solution{
-        public static boolean containsDuplicate(int[] nums){
-            HashMap<Integer, Integer> check = new HashMap<>();
-            for(int i=0; i<nums.length; i++){
-                if(check.containsKey(nums[i])){
-                    check.put(nums[i], check.get(nums[i])+1);
-                } else{
-                    check.put(nums[i], 1);
-                }
-            }return false;
-        }
-        public static void main(String[] args){
-            int[] nums = {1, 2, 3, 1};
-            System.out.println(containsDuplicate(nums));
-         //   int[] nums1 = {1, 2, 3, 4};
-         //   System.out.println(containsDuplicate(nums1));
-        }
-    }

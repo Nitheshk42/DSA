@@ -1,5 +1,6 @@
 package com.example.datastructures;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.HashMap;
 
@@ -18,30 +19,30 @@ class Solution {
 
     }
     public static void main(String[] args){
-       // int[] nums = {1, 3, 5, 2, 5, 5, 7, 8,};
-      //  System.out.println(hasDuplicates(nums));
-        int[] nums = {1, 2, 3, 4, 5};
+        int[] nums = {1, 3, 5, 2, 5, 5, 7, 8,};
         System.out.println(hasDuplicates(nums));
+        int[] nums1 = {1, 2, 3, 4, 5};
+        System.out.println(hasDuplicates(nums1));
     }
 }
 
 //Two Sums using HashMap
 class Solution2 {
-    public static int twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> sum = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int result  =target - nums[i];
-            if (sum.containsKey(result)) {
-                 sum.put(i, (i));
-            } else {
-               sum.put(i, (i));
-            }
-        }
-        return 0;
+    public static int[] twoSums(int[] nums, int target){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i=0; i<nums.length; i++){
+            int result = target - nums[i];
+            if(map.containsKey(result)){
+                return new int[] { map.get(result) , i};
+
+            } map.put(nums[i],i);
+
+        }return new int[] {};
+
     }
-    public static void main(String[] args) {
-        int[] nums = {2, 7, 5, 4};
-        System.out.println(twoSum(nums, 9));
+    public static void main(String[] args){
+        int[] nums = {2, 7, 11, 15};
+        System.out.println(Arrays.toString(twoSums(nums, 9)));
     }
 }
 
