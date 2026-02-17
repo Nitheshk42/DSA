@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 //Sum of Arrays
 class Arrays1 {
@@ -146,7 +148,7 @@ class Arrays7 {
     }
 
 //majorityElement Brute force
-class Arrays9{
+class Arrays8{
     public static int majorityElement(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             int count = 0;
@@ -167,5 +169,22 @@ class Arrays9{
     }
 
     }
-
-    //
+    //ThreeSum with Brute force
+    class Arrays9{
+        public static List<List<Integer>> threeSum(int[] nums) {
+            List<List<Integer>> sum = new ArrayList<>();
+            for(int i=0; i<nums.length; i++){
+                for(int j=i+1; j<nums.length; j++){
+                    for(int k=j+1; k<nums.length; k++){
+                        if(nums[i] +nums [j] + nums[k] == 0){
+                            sum.add((Arrays.asList(nums[i], nums[j], nums[k])));
+                        }
+                    }
+                }
+            }return sum;
+        }
+        public static void main(String[] args){
+            int[] nums = {-1, 0, 1, 2, -1, -4};
+            System.out.println((threeSum(nums)));
+        }
+    }
