@@ -3,7 +3,7 @@ package com.example.datastructures;
 //print from 1 to 5
 class LogicBuildingProblems {
     public static void print1to10(int n){
-        for(int i=0; i<5; i++){
+        for(int i=5; i>=0; i--){
             System.out.println(i);
         }
     }
