@@ -8,7 +8,7 @@ import java.util.HashMap;
 class Solution {
     public static boolean hasDuplicates(int[] nums) {
         HashSet<Integer> seen = new HashSet<>();
-        for (int i=0; i<nums.length; i++) {
+        for(int i=0; i<nums.length; i++) {
             if (seen.contains(nums[i])) {
                 return true;
             }
@@ -68,3 +68,40 @@ class Solution3 {
         System.out.println(majorityElement(nums));
     }
 }
+//Valid anagram using HashMap
+class Solution4 {
+        public static boolean anagram(String s, String t) {
+            HashMap<Character, Integer> map = new HashMap<>();
+            if (s.length() != t.length()) {
+                return false;
+            }
+//            char[] sConvert = s.toCharArray();
+//            char[] tConvert = t.toCharArray();
+//            Arrays.sort(sConvert);
+//            Arrays.sort(tConvert);
+            for (int i = 0; i < s.length(); i++) {
+                map.put(s.charAt(i), map.getOrDefault((s.charAt(i)), 0) + 1);
+
+
+                for (int value : map.values()) {
+                    if (value != 0) {
+                        return false;
+                    }
+                }
+
+            }return true;
+//            if (Arrays.equals(sConvert, tConvert)) {
+//                return true;
+//            }
+//            return false;
+        }
+        public static void main(String[] args){
+            String s = "racecar";
+            String t = "carrace";
+            System.out.println(anagram(s,t));
+            String s1="cat";
+            String s2="tac";
+            System.out.println(anagram(s1,s2));
+        }
+}
+

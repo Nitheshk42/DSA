@@ -1,5 +1,7 @@
 package com.example.datastructures;
 
+import java.util.Arrays;
+
 //print from 1 to 5
 class LogicBuildingProblems {
     public static void print1to10(int n){
@@ -45,18 +47,40 @@ class LogicBuildingProblems2 {
 }
 
 //sum of Natural numbers
-/*class LogicBuildingProblems3 {
+class LogicBuildingProblems3 {
     public static int naturalNumbers(int n){
         int result = 0;
         for(int i=0; i<n; i++){
-            result = result+1;
-            System.out.println(result);
-        }return 0;
+              result = i+i+i;
+        }return result;
     }
     public static void main(String[] args){
         int n=3;
-        naturalNumbers(n);
+       System.out.println(naturalNumbers(n));
     }
-}*/
+}
+
+//Program to multiply two float numbers.
+class StringProblem3{
+    public static void main(String[] args){
+        float x= 12.32f;
+        float y=23.22f;
+        System.out.println(x*y);
+    }
+}
+
+//Program to swap two numbers.
+class LogicBuildingProblems4{
+    public static void main(String[] args){
+        int x = 1, y=2;
+        int a = x;
+         x = y;
+         y = a;
+        System.out.println("x ="+ x +","+ "y ="+ a);
+    }
+}
+
+
+
 
 
